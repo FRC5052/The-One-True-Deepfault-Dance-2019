@@ -122,6 +122,7 @@ AddOutputFilter chunkFilter
 		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
 		<Item Name="WPI_RobotDriveOpen7MotorWithSPARK.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/RobotDrive/WPI_RobotDriveOpen7MotorWithSPARK.vi"/>
 		<Item Name="Side Motion Calculator.vi" Type="VI" URL="../../The-One-True-Telescope-2018/Side Motion Calculator.vi"/>
+		<Item Name="RS_Flip_Flop.vi" Type="VI" URL="../../The-One-True-Telescope-2018/Support Code/RS_Flip_Flop.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Command Status Info.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Framework/Command Status Info.ctl"/>
