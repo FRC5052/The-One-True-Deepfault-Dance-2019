@@ -2,6 +2,25 @@
 <Project Type="Project" LVVersion="18008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">true</Property>
 	<Property Name="NI.Project.Description" Type="Str"></Property>
+	<Property Name="varPersistentID:{0A747E59-4A3F-46D4-8F0F-383A7179BAB8}" Type="Ref">/Target/SubSystems.vi/PID/linearity</Property>
+	<Property Name="varPersistentID:{23140560-ABA6-47EC-AAFD-FE208BFF6826}" Type="Ref">/Target/SubSystems.vi/PID/setpoint high</Property>
+	<Property Name="varPersistentID:{266B589C-12AC-4A40-9198-0A0425303CFF}" Type="Ref">/Target/SubSystems.vi/PID/dt out (s)</Property>
+	<Property Name="varPersistentID:{6FF80837-D65C-404B-B20E-D01D540B350C}" Type="Ref">/Target/SubSystems.vi/PID/manual control</Property>
+	<Property Name="varPersistentID:{71F39B93-B59B-4FB3-8EB1-E6E75A0C354F}" Type="Ref">/Target/SubSystems.vi/PID/output low</Property>
+	<Property Name="varPersistentID:{741B3059-D622-49B3-9A6F-A31E3CBC3C26}" Type="Ref">/Target/SubSystems.vi/PID/setpoint low</Property>
+	<Property Name="varPersistentID:{81404FCD-5483-4115-99DD-CFD1248D43C2}" Type="Ref">/Target/SubSystems.vi/PID/output</Property>
+	<Property Name="varPersistentID:{847A5210-8148-46C5-B1B6-A791A3C9EE59}" Type="Ref">/Target/SubSystems.vi/PID/setpoint</Property>
+	<Property Name="varPersistentID:{88196BB6-2D65-429B-84E0-F1A50CB991CE}" Type="Ref">/Target/SubSystems.vi/PID/integral time (Ti, min)</Property>
+	<Property Name="varPersistentID:{8CB473F7-E81C-4755-8EBD-C87B6A61674B}" Type="Ref">/Target/SubSystems.vi/PID/output high</Property>
+	<Property Name="varPersistentID:{9B3BFDC7-D70B-4EFB-90F1-1E0C05C89DE2}" Type="Ref">/Target/SubSystems.vi/PID/proportional gain (Kc)</Property>
+	<Property Name="varPersistentID:{9C7FC750-EAF8-4827-9172-09B42EA00FCD}" Type="Ref">/Target/SubSystems.vi/PID/process variable</Property>
+	<Property Name="varPersistentID:{A571CCB9-B973-450D-BD57-FA41722353C0}" Type="Ref">/Target/SubSystems.vi/PID/reinitialize? (F)</Property>
+	<Property Name="varPersistentID:{C1743954-6C75-4271-BA66-5FC9BA8095B7}" Type="Ref">/Target/SubSystems.vi/PID/auto? (T)</Property>
+	<Property Name="varPersistentID:{C64C879B-49EC-4F4D-903B-BC9F578DA1A3}" Type="Ref">/Target/SubSystems.vi/PID/derivative time (Td, min)</Property>
+	<Property Name="varPersistentID:{D0A30F6B-AC44-4F10-9703-9920D0E941BF}" Type="Ref">/Target/SubSystems.vi/PID/beta</Property>
+	<Property Name="varPersistentID:{D558C42F-6476-4E0D-946D-6CBA147F966B}" Type="Ref">/Target/SubSystems.vi/PID/dt (s)</Property>
+	<Property Name="varPersistentID:{F0B58D69-001D-47EB-A335-BFD0FAC35239}" Type="Ref">/Target/SubSystems.vi/PID/error in</Property>
+	<Property Name="varPersistentID:{F341B50D-A80A-437E-AE6F-845272A1A0E8}" Type="Ref">/Target/SubSystems.vi/PID/error out</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="NI.SortType" Type="Int">3</Property>
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
@@ -122,7 +141,29 @@ AddOutputFilter chunkFilter
 		<Item Name="Teleop.vi" Type="VI" URL="../Teleop.vi"/>
 		<Item Name="Autonomous.vi" Type="VI" URL="../Autonomous.vi"/>
 		<Item Name="Test.vi" Type="VI" URL="../Test.vi"/>
-		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi"/>
+		<Item Name="SubSystems.vi" Type="VI" URL="../SubSystems.vi">
+			<Item Name="PID" Type="IIO Function Block">
+				<Item Name="error in" Type="Variable"/>
+				<Item Name="setpoint" Type="Variable"/>
+				<Item Name="process variable" Type="Variable"/>
+				<Item Name="setpoint high" Type="Variable"/>
+				<Item Name="setpoint low" Type="Variable"/>
+				<Item Name="proportional gain (Kc)" Type="Variable"/>
+				<Item Name="integral time (Ti, min)" Type="Variable"/>
+				<Item Name="derivative time (Td, min)" Type="Variable"/>
+				<Item Name="dt (s)" Type="Variable"/>
+				<Item Name="output high" Type="Variable"/>
+				<Item Name="reinitialize? (F)" Type="Variable"/>
+				<Item Name="output low" Type="Variable"/>
+				<Item Name="beta" Type="Variable"/>
+				<Item Name="auto? (T)" Type="Variable"/>
+				<Item Name="linearity" Type="Variable"/>
+				<Item Name="manual control" Type="Variable"/>
+				<Item Name="error out" Type="Variable"/>
+				<Item Name="output" Type="Variable"/>
+				<Item Name="dt out (s)" Type="Variable"/>
+			</Item>
+		</Item>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Command Status Info.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Framework/Command Status Info.ctl"/>
@@ -515,6 +556,30 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_CAN_PCMReceive.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PCM/WPI_CAN_PCMReceive.vi"/>
 				<Item Name="WPI_CAN_PCMMessageIDs.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PCM/WPI_CAN_PCMMessageIDs.ctl"/>
 				<Item Name="WPI_CAN_PCMGlobal.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PCM/WPI_CAN_PCMGlobal.vi"/>
+				<Item Name="WPI_CAN_PCMSend.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/CAN/PCM/WPI_CAN_PCMSend.vi"/>
+				<Item Name="WPI_CompressorStart.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Compressor/WPI_CompressorStart.vi"/>
+				<Item Name="WPI_CompressorOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Compressor/WPI_CompressorOpen.vi"/>
+				<Item Name="WPI_SolenoidChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidChannel.ctl"/>
+				<Item Name="WPI_ERRSolenoidAllocation.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_ERRSolenoidAllocation.vi"/>
+				<Item Name="WPI_ERRAllocAnInvalidSolenoidIdx.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_ERRAllocAnInvalidSolenoidIdx.vi"/>
+				<Item Name="WPI_SolenoidCacheOp.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidCacheOp.ctl"/>
+				<Item Name="WPI_SolenoidCache.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidCache.vi"/>
+				<Item Name="WPI_SolenoidDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidDevRef.ctl"/>
+				<Item Name="WPI_SolenoidOpenDouble.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidOpenDouble.vi"/>
+				<Item Name="WPI_SolenoidOpenSingle.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidOpenSingle.vi"/>
+				<Item Name="WPI_SolenoidOpen.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidOpen.vi"/>
+				<Item Name="WPI_SolenoidRefNum Registry Read Name.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidRefNum Registry Read Name.vi"/>
+				<Item Name="WPI_SolenoidSafetyError.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyError.vi"/>
+				<Item Name="WPI_SolenoidDoesDevRefExist.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidDoesDevRefExist.vi"/>
+				<Item Name="WPI_SolenoidSafetyCheck.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyCheck.vi"/>
+				<Item Name="WPI_ERRSolenoidNotAllocated.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_ERRSolenoidNotAllocated.vi"/>
+				<Item Name="WPI_SolenoidSafetyUpdate.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyUpdate.vi"/>
+				<Item Name="WPI_SolenoidSetBool.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/Deprecated/WPI_SolenoidSetBool.vi"/>
+				<Item Name="WPI_SolenoidValue.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidValue.ctl"/>
+				<Item Name="WPI_SolenoidSetEnum.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSetEnum.vi"/>
+				<Item Name="WPI_SolenoidSet.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSet.vi"/>
+				<Item Name="WPI_SolenoidSafetyTest.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyTest.vi"/>
+				<Item Name="WPI_SolenoidSafetyConfig.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Solenoid/WPI_SolenoidSafetyConfig.vi"/>
 			</Item>
 			<Item Name="nivissvc.dll" Type="Document" URL="nivissvc.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
