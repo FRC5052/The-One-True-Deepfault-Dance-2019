@@ -1,5 +1,9 @@
 [My Computer]
-My Computer = "10.2.89.107"
+<<<<<<< HEAD
+My Computer = "10.2.86.30"
+=======
+My Computer = "10.2.92.236"
+>>>>>>> parent of 5e0de34... Merge branch 'JoshHasNoTrustInSoftwareKids' of https://github.com/FRC5052/The-One-True-Deepfault-Dance-2019 into JoshHasNoTrustInSoftwareKids
 
 [Target]
 Target = "roboRIO-5052-FRC.local"
