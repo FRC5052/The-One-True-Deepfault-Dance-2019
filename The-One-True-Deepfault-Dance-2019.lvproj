@@ -164,6 +164,8 @@ AddOutputFilter chunkFilter
 				<Item Name="dt out (s)" Type="Variable"/>
 			</Item>
 		</Item>
+		<Item Name="TeleOp Temporary.vi" Type="VI" URL="../TeleOp Temporary.vi"/>
+		<Item Name="Controller Values.ctl" Type="VI" URL="../Controller Values.ctl"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Command Status Info.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Framework/Command Status Info.ctl"/>
